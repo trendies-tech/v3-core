@@ -1,8 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 pragma solidity >=0.5.0;
 
-import 'forge-std/console2.sol';
-
 /// @title Oracle
 /// @notice Provides price and liquidity data useful for a wide variety of system designs
 /// @dev Instances of stored oracle data, "observations", are collected in the oracle array
@@ -245,7 +243,6 @@ library Oracle {
         uint128 liquidity,
         uint16 cardinality
     ) internal view returns (int56 tickCumulative, uint160 secondsPerLiquidityCumulativeX128) {
-        console2.log('OBSERVING SINGLE!', tick);
         if (secondsAgo == 0) {
             Observation memory last = self[index];
             if (last.blockTimestamp != time) last = transform(last, time, tick, liquidity);

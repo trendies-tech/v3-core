@@ -7,7 +7,6 @@ import './UniswapV3PoolDeployer.sol';
 import './NoDelegateCall.sol';
 
 import './UniswapV3Pool.sol';
-import 'forge-std/console2.sol';
 
 /// @title Canonical Uniswap V3 factory
 /// @notice Deploys Uniswap V3 pools and manages ownership and control over pool protocol fees
